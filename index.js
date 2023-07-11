@@ -4,12 +4,10 @@ require('./Config/config')
 const users = require('./Schema/useScema')
 const cors = require("cors");
 require('dotenv').config()
-const PORT = process.env.PORT || 6000
 
-console.log(PORT)
-
-app.use(express.json())
 app.use(cors());
+app.use(express.json())
+
 
 app.post("/",async(req,res)=>{
     console.log(req.body)
@@ -27,4 +25,4 @@ app.get("",(req,res)=>{
 
 
 
-app.listen(PORT)
+app.listen(4000)
